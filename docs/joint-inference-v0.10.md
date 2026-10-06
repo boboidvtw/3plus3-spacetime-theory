@@ -388,3 +388,17 @@ Then impose:
 The goal of v0.11 should be **functional-law compression**: determine whether the temporal hypothesis can remain predictive with only a few shared coefficients.
 
 Only after that stage should the repository begin a literature-backed search for candidate real clock platforms.
+
+
+---
+
+## 17. v0.11 continuation
+
+Functional-law compression is now implemented in:
+
+- [`notebooks/functional_law_compression_v0.11.ipynb`](../notebooks/functional_law_compression_v0.11.ipynb)
+- [`docs/functional-law-compression-v0.11.md`](functional-law-compression-v0.11.md)
+
+The main theoretical correction is that (\epsilon) cannot be interpreted independently of the normalization of (F): the transformation (F\to cF, \epsilon\to\epsilon/c) leaves the phenomenology unchanged. v0.11 therefore works with directly identifiable product coefficients (\theta_k=\epsilon\alpha_k).
+
+It also exposes a mechanistic-identifiability problem: systemhood features generated from the same merger profile can be strongly collinear. v0.12 should deliberately construct counterexample systems that vary (B,C,A,P) independently enough to test whether this basis is physically meaningful.
