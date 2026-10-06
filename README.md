@@ -70,6 +70,8 @@ This repository explores a **speculative (3+3) spacetime concept** with three sp
 
 數學化第一步已開始：[`docs/mathematical-foundation-v2.md`](docs/mathematical-foundation-v2.md) 建立了 $A+B\rightleftarrows C$ Toy Model v0.1、GR/QM 基準、relational time、systemhood placeholder 與明確 failure criteria。
 
+目前研究進度已推進至 **v0.3**：[`docs/systemhood-functional-v0.2.md`](docs/systemhood-functional-v0.2.md) 建立 systemhood profile，[`docs/computable-systemhood-v0.3.md`](docs/computable-systemhood-v0.3.md) 則把 correlation、autonomy、persistence 與 binding 的部分定義改造成有限維模型中可計算的 diagnostics。
+
 特別注意：血液更新、頭髮成長速度不同、粒子壽命不同等現象，標準物理本來就能用共同時間參數描述，因此**不能直接作為多時間存在的證據**。Version 2 必須進一步證明局部 (\tau_i) 不是單純的重新參數化，並導出相對於 QM/QFT + GR 可區分的結果。
 
 ---
