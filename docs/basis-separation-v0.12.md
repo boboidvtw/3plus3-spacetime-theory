@@ -381,3 +381,21 @@ The v0.13 question is therefore:
 ]
 
 That is the required gate before temporal phenomenology resumes.
+
+
+---
+
+## 17. v0.13 continuation
+
+The hand-assigned counterexample matrix has now been replaced by an explicit model-derived benchmark pipeline:
+
+- [`notebooks/model_derived_systemhood_v0.13.ipynb`](../notebooks/model_derived_systemhood_v0.13.ipynb)
+- [`docs/model-derived-systemhood-v0.13.md`](model-derived-systemhood-v0.13.md)
+
+Undefined diagnostics are retained as missing rather than imputed. Free and interaction-off Bell benchmarks, for example, do not receive an invented separation-energy (B).
+
+The resulting benchmark family exposes shared-control dependence: (J) influences both the binding proxy and autonomy, while open-system parameters jointly influence correlation and persistence. The next stage should therefore move from covariance/rank analysis to controlled interventions and study the Jacobian
+
+[
+M_{kj}=\partial I_k/\partial u_j.
+]
