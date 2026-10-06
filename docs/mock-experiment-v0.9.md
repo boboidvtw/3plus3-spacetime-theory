@@ -400,3 +400,17 @@ Then compare:
 This will test whether one common temporal law can explain multiple synthetic systems better than independent nuisance shifts.
 
 Only after that should the project begin selecting candidate real clock platforms.
+
+
+---
+
+## 16. v0.10 continuation
+
+Cross-system joint inference is now implemented in:
+
+- [`notebooks/joint_inference_v0.10.ipynb`](../notebooks/joint_inference_v0.10.ipynb)
+- [`docs/joint-inference-v0.10.md`](joint-inference-v0.10.md)
+
+Multiple synthetic identity-event profiles now share one global (\epsilon), while each experiment retains independent interaction, drift and offset nuisance parameters. The notebook adds null-vs-temporal model comparison, leave-one-experiment-out prediction, per-experiment consistency checks, a no-transition control, and repeated (\epsilon=0) injection-recovery tests.
+
+The remaining major weakness is no longer statistical methodology but functional freedom: (F_i) is still phenomenological. v0.11 should constrain it directly from the systemhood profile (\mathbf I=(B,C,A,P)).
