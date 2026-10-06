@@ -1,7 +1,6 @@
 # 3plus3-spacetime-theory
 
-# 🌌 A Speculative (3+3) Spacetime Model — 個人思想實驗
-> **Wick-Rotated Mass Generation, Phase-Space Entropy Gradients, and Quadrupolar Gravitational Radiation**
+> A speculative research notebook on spacetime, dynamical identity, and the possibility of non-redundant local temporal degrees of freedom.
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status](https://img.shields.io/badge/Status-Speculative%20%2F%20Not%20Peer--Reviewed-orange.svg)](#)
@@ -9,156 +8,496 @@
 
 ---
 
-## ⚠️ 免責聲明 / Disclaimer
+## ⚠️ 重要聲明 / Important Disclaimer
 
-### 繁體中文
+**本專案是個人思想實驗與推測性研究紀錄，不是已被證明、同行評審或物理學界接受的理論。**
 
-**本專案是「個人思想實驗／推測性構想」，不是已證明或已被物理學界接受的理論。**
+This repository is a **speculative thought experiment and research notebook**, not an established physical theory.
 
-- 內容由作者的直覺構想出發，並藉由與 AI 對話輔助整理而成，**未經任何同行評審（peer review）**。
-- 文中的「推導」多屬**啟發式類比與重新詮釋**，並非嚴格的數學物理證明；「數學自洽」僅為目標，尚未被證明達成。
-- 本模型已知存在多個**未解決的數學與物理問題**（詳見下方「已知問題與限制」），其中部分問題與模型的核心主張直接衝突。
-- 「實驗預測」章節為示意性構想，**並非由模型嚴格推導出的可測量預測**。
-- 請讀者將本專案視為一份**創意探索紀錄與學習素材**，切勿引用為已確立的科學結論。
-
-### English
-
-**This project is a personal thought experiment / speculative idea exploration. It is NOT an established or proven physical theory.**
-
-- The content originates from the author's intuitive ideas, organized with AI assistance, and has **not undergone any peer review**.
-- The "derivations" herein are largely **heuristic analogies and reinterpretations**, not rigorous mathematical-physics proofs. "Mathematical consistency" is a goal, not a demonstrated result.
-- The model has several **known unresolved mathematical and physical problems** (see "Known Issues & Limitations" below), some of which conflict directly with its central claims.
-- The "experimental predictions" are schematic sketches, **not quantitative predictions rigorously derived from the model**.
-- Please treat this repository as a **record of creative exploration and learning material**, and do not cite it as established science.
+- 內容由直覺構想出發，並使用 AI 協助整理、檢查與建立 toy models。
+- 文中的數學多數是研究中的工作定義、diagnostics、null models 與 falsifiability tests，不應被視為已完成的基礎理論。
+- 所有與「新時間自由度」、「多重時間」或「時間湧現」相關的主張，目前都**沒有實驗證據**。
+- Version 2 已刻意建立多個 failure criteria，並持續淘汰無法與標準物理區分的想法。
+- 請以教科書、同行評審論文與標準物理理論作為可靠依據。
 
 ---
 
-## 📌 構想摘要 / Concept Summary
+# 🧭 Repository Overview
 
-### 繁體中文
+這個 repository 現在包含兩條不同階段的研究路線：
 
-本專案探索一個**推測性的 (3+3) 時空幾何構想**（3 個空間維度與 3 個時間維度 $(x, y, z, t_1, t_2, t_3)$）：嘗試藉由仿照 Two-Time Physics 的 $Sp(2,\mathbb{R}) \times U(1)$ 規範約束來處理多時間維度理論常見的負模長態（Ghost States）問題；並嘗試對微觀時間軸進行 Wick Rotation（$t_2 \to -i \tau_2$），把「靜止質量 $m_0$」**詮釋**為受測光（$\gamma_{sys}$）在內部軸上的高頻震盪能量（$E_2 = m_0 c^2$）。另外嘗試區分靜態 $1/r^2$ 引力場與動態四極矩重力波的圖像。這些皆為**構想層次的嘗試**，是否能發展為自洽理論仍是開放問題。
+| Version | 主題 | 狀態 |
+|---|---|---|
+| **Version 1** | Fixed `(3+3)` spacetime | 歷史／原始構想，保留作為 thought experiment |
+| **Version 2** | Emergent Local Time / Dynamic Temporal Identity | **目前 active research direction**，暫停於 v0.14 checkpoint |
 
-### English
+Version 2 **不是**對 Version 1 的證明，也不是已完成的替代理論。
 
-This repository explores a **speculative (3+3) spacetime concept** with three spatial and three temporal coordinates. It attempts to address the ghost-state problem of multi-time theories by borrowing $Sp(2,\mathbb{R}) \times U(1)$-type gauge constraints from Two-Time Physics, and applies a Wick rotation to an internal temporal axis ($t_2 \to -i \tau_2$) to **interpret** rest mass $m_0$ as the intrinsic oscillation energy ($E_2 = m_0 c^2$) of localized "system photons" ($\gamma_{sys}$). It also sketches a distinction between static $1/r^2$ gravitational fields and dynamic quadrupolar waves. All of these are **concept-level attempts**; whether they can be developed into a self-consistent theory remains an open question.
-
----
-
-## 🧭 Version 2：湧現式局部時間 / Emergent Local Time
-
-> **2026-10 構想演進：** 本專案目前正在探索一條與原始固定 `(3+3)` 時空不同的新方向。原始模型保留作為 Version 1，不視為已被新構想證明或取代。
-
-新的工作假說不再預設宇宙只有三條、或固定 (N) 條所有物體共用的額外時間軸。相反地，它探索：
-
-- 每個客觀可區分的 dynamical system / state 是否可具有自己的局部時間歷程 (\tau_S)；
-- 人體、血液、細胞、分子、原子等不同層級的 temporal histories 是否能同時存在；
-- 即使複合系統持續交換／更新其物質組成，系統本身仍可能保持連續的 temporal identity；
-- 結合形成新系統與分離形成新個體，都可能對應新的 temporal identity；
-- 真正可觀測的量或許不是孤立的 (\tau_i)，而是系統之間的關係，例如 (d\tau_i/d\tau_j)；
-- 必須建立 observer-independent 的 **systemhood / dynamical individuation** 判準，否則「時間」會淪為人為劃分物體的結果。
-
-這個方向暫稱：
-
-**3D Space + Dynamic Hierarchical Temporal Network**
-
-或：
-
-**Emergent Local Time / Dynamic Temporal Identity Framework**
-
-完整概念筆記見 [`docs/emergent-local-time-v2.md`](docs/emergent-local-time-v2.md)。
-
-數學化第一步已開始：[`docs/mathematical-foundation-v2.md`](docs/mathematical-foundation-v2.md) 建立了 $A+B\rightleftarrows C$ Toy Model v0.1、GR/QM 基準、relational time、systemhood placeholder 與明確 failure criteria。
-
-目前研究進度已推進至 **v0.3**：[`docs/systemhood-functional-v0.2.md`](docs/systemhood-functional-v0.2.md) 建立 systemhood profile，[`docs/computable-systemhood-v0.3.md`](docs/computable-systemhood-v0.3.md) 則把 correlation、autonomy、persistence 與 binding 的部分定義改造成有限維模型中可計算的 diagnostics。
-
-特別注意：血液更新、頭髮成長速度不同、粒子壽命不同等現象，標準物理本來就能用共同時間參數描述，因此**不能直接作為多時間存在的證據**。Version 2 必須進一步證明局部 (\tau_i) 不是單純的重新參數化，並導出相對於 QM/QFT + GR 可區分的結果。
+它是在檢查 Version 1 的固定多時間軸想法後，發展出的另一條更保守、更可否證的研究方向。
 
 ---
 
-## 💡 核心構想（推測）/ Core Conjectures (Speculative)
+# 🚦 Current Research Status
 
-> 下表為本專案的**猜想**，非已證明的結果。The table below lists **conjectures**, not established results.
+## Version 2 — Emergent Local Time
 
-| 核心議題 Core Topic | 標準物理觀點 Standard View | 本專案猜想 This Project's Conjecture |
-| :--- | :--- | :--- |
-| **靜止質量源頭<br>Rest Mass Origin** | Higgs 機制與 QCD 束縛能<br>Higgs mechanism & QCD binding energy | 或可詮釋為鎖定於內部軸 $\tau_2$ 的高頻振盪能量（$E_2 = m_0 c^2$）<br>Possibly interpretable as intrinsic oscillation energy along $\tau_2$ |
-| **因果律與鬼態<br>Causality & Ghosts** | 多時間維度引發 Ghost 態與因果問題<br>Multi-time theories suffer ghosts & causality issues | 希望以 $Sp(2,\mathbb{R}) \times U(1)$ 型約束消去鬼態（**尚未證明**）<br>Hoped to be removable via gauge constraints (**unproven**) |
-| **時間箭頭<br>Arrow of Time** | 熱力學統計演化（低熵初始條件）<br>Thermodynamic evolution from low-entropy initial conditions | 猜想為熵梯度向量 $\mathcal{A}_{\mathbf{t}} = \nabla_{\mathbf{t}} S$ 的非對稱投影<br>Conjectured asymmetric projection of an entropy-gradient vector |
-| **靜態引力與重力波<br>Static vs. Dynamic Gravity** | 廣義相對論（Birkhoff 定理與四極矩輻射）<br>General Relativity (Birkhoff's theorem; quadrupole radiation) | 沿用標準結果並嘗試以 (3+3) 圖像重新敘述（**非新推導**）<br>Standard results restated in the (3+3) picture (**not a new derivation**) |
+目前主要研究方向不再假設宇宙具有固定的額外時間軸。
+
+Version 2 探索的是：
+
+> objectively individuated dynamical systems 是否可能具有不可被單一全域時間重新參數化掉的 local temporal histories。
+
+候選關係寫成：
+
+[
+S_i leftrightarrow 	au_i
+]
+
+但目前最重要的科學結論仍然是：
+
+[
+oxed{
+	ext{No new physical time degree of freedom has been established.}
+}
+]
+
+Version 2 已發展出：
+
+- dynamical individuation；
+- systemhood diagnostics；
+- dynamic system boundaries；
+- operational clocks；
+- standard-physics null models；
+- temporal residual templates；
+- identifiability tests；
+- cross-system inference；
+- model compression；
+- model-derived diagnostics；
+- intervention-based validation。
+
+完整 checkpoint：
+
+**[`docs/version2-research-checkpoint-v0.14.md`](docs/version2-research-checkpoint-v0.14.md)**
+
+目前 Temporal Phenomenology 已刻意暫停。
+
+恢復 temporal modeling 前的 research gate 是：
+
+[
+oxed{
+	ext{multi-platform physical interventions}
+ightarrow
+	ext{validated systemhood basis}
+ightarrow
+	ext{only then reconsider temporal dynamics}
+}
+]
+
+下一個規劃階段：
+
+**v0.15 — Multi-Platform Intervention Atlas**
 
 ---
 
-## 🚧 已知問題與限制 / Known Issues & Limitations
+# 🧠 Version 2 in One Diagram
 
-誠實列出目前已知、尚未解決的問題（歡迎指正與討論）：
+[
+	ext{nested/local-time intuition}
+]
 
-1. **Wick rotation 與「三維時間」的矛盾**：$t_2 \to -i\tau_2$ 後，$\tau_2$ 在度規中變為正號（類空間）維度，模型實際上成為「4 空間 + 2 時間」，與「3 個時間維度」的核心主張衝突。
-   *After Wick rotation, $\tau_2$ becomes effectively spacelike, making the model (4+2) rather than (3+3).*
-2. **$E_2 = m_0 c^2$ 是「定義／詮釋」而非「推導」**：將 $m_0^2 c^4$ 與內部能量分量對應是重新標記；沒有動力學（Lagrangian）決定 $E_2$ 的取值，因此無預測力。
-   *The identification is definitional; no dynamics determines $E_2$.*
-3. **尺度因子 $\alpha_2$ 前後矛盾**：導言要求 $\alpha_2 \sim \ell_P/\lambda_C \ll 1$，質量推導卻需取 $\alpha_2 = 1$。
-   *$\alpha_2 \ll 1$ (Sec. 1) conflicts with $\alpha_2 = 1$ (mass derivation).*
-4. **約束方程式可能無解**：$(\hat{P}_2^2 + \hat{X}_2^2)\,|\Psi\rangle = 0$ 中的算符為正定（最低本徵值大於零），照字面將消滅整個 Hilbert 空間；正確的約束處理需要完整的 BRST／規範固定分析，本文未提供。
-   *The written constraint annihilates the entire Hilbert space; a proper BRST analysis is absent.*
-5. **超雙曲方程的初值問題（Tegmark 1997）未實際解決**：僅以宣告方式帶過，缺乏數學處理。
-   *The ultrahyperbolic Cauchy problem is asserted away, not solved.*
-6. **「測量＝光子撞擊」與實驗不符**：量子擦除與腔 QED 的 which-path 實驗顯示，不需光子散射也能破壞干涉；$t_3$ 軸的物理動機因此存疑。
-   *Which-path experiments (quantum eraser, cavity QED) show measurement does not require photon scattering.*
-7. **「三光分工」與退相干理論的關係**：受測光／觀察光／環境光實質對應退相干理論中標準的 system / apparatus / environment 三分法；可計算的部分即標準退相干理論，額外時間維度並未產生標準理論算不出的結果。
-   *The tripartite photon scheme mirrors the standard system/apparatus/environment decomposition of decoherence theory.*
-8. **「實驗預測」未嚴格推導且有量綱問題**：$\delta\Phi_{\text{corr}}$ 中的 $\Delta\tau_2$ 缺乏操作型定義；$\Gamma_{\text{dephasing}} \ge \sigma_S^2 k_B/\hbar$ 量綱不是速率（1/s），公式需要重建。
-   *$\Delta\tau_2$ lacks operational definition; the dephasing bound is dimensionally inconsistent.*
-9. **重力章節非新結果**：$1/r^2$ 場與四極矩波公式為標準牛頓引力與線性化廣義相對論的照錄，並非由 (3+3) 模型導出。
-   *The gravity section restates standard results; nothing is derived from the (3+3) framework.*
+[
+downarrow
+]
+
+[
+	ext{dynamical individuation}
+]
+
+[
+downarrow
+]
+
+[
+mathbf I=(B,C,A,P)
+]
+
+[
+downarrow
+]
+
+[
+	ext{dynamic system identity}
+]
+
+[
+downarrow
+]
+
+[
+	ext{operational clocks}
+]
+
+[
+downarrow
+]
+
+[
+Delta R_{ij}
+=
+R_{ij}^{obs}
+-
+R_{ij}^{std}
+]
+
+[
+downarrow
+]
+
+[
+	ext{identifiability}
+]
+
+[
+downarrow
+]
+
+[
+	ext{functional compression}
+]
+
+[
+downarrow
+]
+
+[
+	ext{model-derived diagnostics}
+]
+
+[
+downarrow
+]
+
+[
+oxed{	ext{intervention-based validation}}
+]
+
+目前停在最後這一層。
 
 ---
 
-## 🔬 示意性實驗方向（非嚴格預測）/ Schematic Experimental Directions (Not Rigorous Predictions)
+# 🔬 Version 2 Core Ideas
 
-> 以下僅為構想層次的方向，公式為示意，尚未由模型嚴格推導，且第 2 項已知有量綱問題（見上方第 8 點）。
+## 1. Different rates are not different times
 
-1. **阿秒雷射幾何相位修正（構想）**：若內部軸 $\tau_2$ 存在，超快電離實驗（$\Delta t \sim 10^{-18}\text{ s}$）中或許出現額外相位項（示意式）：
-   $$\delta \Phi_{\text{corr}} \sim \alpha_2 \left( \frac{m_0 c^2}{\hbar} \right) \Delta \tau_2$$
-2. **量子位元退相干底線（構想，公式待重建）**：猜想即使完全隔絕環境，仍存在由微觀漲落決定的最小退相干率；目前寫出的公式量綱不正確，僅代表方向性想法。
+血液更新、頭髮生長、原子運動、粒子壽命或天體演化速度不同，不能直接證明存在不同物理時間。
+
+標準物理本來就允許：
+
+[
+X_i=X_i(t),
+qquad
+dot X_i
+eqdot X_j.
+]
+
+因此：
+
+[
+oxed{
+	ext{different process rates}
+
+otRightarrow
+	ext{different physical times}
+}
+]
+
+## 2. Dynamical identity before temporal identity
+
+Version 2 不再使用：
+
+> 物體結合就創造一條新時間。
+
+目前較精確的工作假說是：
+
+[
+oxed{
+	ext{dynamical individuation}
+ightarrow
+	ext{candidate temporal identity}
+}
+]
+
+也就是先回答「什麼算一個客觀、可持續、可預測的 physical system」，才能談它是否具有獨立 temporal history。
+
+## 3. Systemhood profile
+
+目前候選 diagnostics：
+
+[
+oxed{
+mathbf I=(B,C,A,P)
+}
+]
+
+其中：
+
+- (B): binding / cohesion；
+- (C): correlation / integration；
+- (A): dynamical autonomy；
+- (P): persistence / predictive closure。
+
+但 v0.13–v0.14 已顯示：
+
+[
+oxed{
+(B,C,A,P)
+	ext{ 尚未被證明是 universal four-dimensional basis}
+}
+]
+
+尤其 (B) 目前最可能是 domain-specific。
+
+## 4. Operational clock requirement
+
+新時間假說不能只靠語言描述。
+
+必須先有可測量 clock variable，並比較：
+
+[
+R_{ij}
+=
+rac{d	au_i}{d	au_j}.
+]
+
+真正需要檢查的是：
+
+[
+oxed{
+Delta R_{ij}
+=
+R_{ij}^{obs}
+-
+R_{ij}^{std}
+}
+]
+
+其中 (R_{ij}^{std}) 必須包含完整的 GR + QM/QFT + interaction + calibration + ordinary systematics。
+
+## 5. Reparameterization null
+
+如果所有候選 local times 都只是：
+
+[
+	au_i=f_i(t)
+]
+
+而沒有改變任何可觀測結果，那麼額外 (	au_i) 只是冗餘標記。
+
+這是 Version 2 的基本 null hypothesis。
 
 ---
 
-## 📂 專案結構 / Repository Structure
+# ✅ What Version 2 Has Achieved
+
+目前最重要的成果不是「證明了多重時間」，而是逐步建立了一套可以否定錯誤捷徑的 framework。
+
+已明確排除或削弱：
+
+- 不同 process rates 就等於不同 physical times；
+- entanglement alone 足以定義 systemhood；
+- system formation alone 足以證明 temporal emergence；
+- initial-state fidelity 可直接當 persistence；
+- 任意 partition 都可被視為 objective system；
+- hand-assigned systemhood scores 可當物理推導；
+- artificial control knobs 可用來製造 full-rank systemhood basis；
+- 高統計顯著性可取代 structural identifiability。
+
+Version 2 現在比較像：
+
+[
+oxed{
+	ext{a falsifiable research framework}
+}
+]
+
+而不是一套完成的 physical theory。
+
+---
+
+# ❌ What Has Not Been Established
+
+截至 v0.14，尚未建立：
+
+1. 額外 physical time degrees of freedom；
+2. composites 真的產生新的 timelike dimensions；
+3. 任何 clock anomaly；
+4. 非零 temporal parameter；
+5. 由 fundamental dynamics 推導出的 temporal functional；
+6. universal ((B,C,A,P)) basis；
+7. 超越 GR / QM / QFT 的已驗證預測；
+8. covariant action 或 Lagrangian；
+9. quantized temporal theory；
+10. real-world experimental detection。
+
+---
+
+# 📚 Version 2 Key Documents
+
+建議閱讀順序：
+
+1. [Emergent Local Time concept](docs/emergent-local-time-v2.md)
+2. [Mathematical Foundation v0.1](docs/mathematical-foundation-v2.md)
+3. [Systemhood Functional v0.2](docs/systemhood-functional-v0.2.md)
+4. [Computable Systemhood v0.3](docs/computable-systemhood-v0.3.md)
+5. [Numerical Systemhood v0.4](docs/numerical-systemhood-v0.4.md)
+6. [Partition Robustness v0.5](docs/partition-robustness-v0.5.md)
+7. [Dynamic System Identity v0.6](docs/dynamic-system-identity-v0.6.md)
+8. [Operational Clocks v0.7](docs/operational-clocks-v0.7.md)
+9. [Temporal Residual v0.8](docs/temporal-residual-v0.8.md)
+10. [Mock Experiment v0.9](docs/mock-experiment-v0.9.md)
+11. [Joint Inference v0.10](docs/joint-inference-v0.10.md)
+12. [Functional Law Compression v0.11](docs/functional-law-compression-v0.11.md)
+13. [Basis Separation v0.12](docs/basis-separation-v0.12.md)
+14. [Model-Derived Systemhood v0.13](docs/model-derived-systemhood-v0.13.md)
+15. [Intervention Jacobian v0.14](docs/intervention-jacobian-v0.14.md)
+16. [Version 2 Research Checkpoint](docs/version2-research-checkpoint-v0.14.md)
+
+---
+
+# 🧪 Version 2 Notebooks
+
+Version 2 includes executable toy-model notebooks for:
+
+- finite-dimensional systemhood diagnostics；
+- partition robustness；
+- dynamic system identity；
+- operational clocks；
+- synthetic temporal residuals；
+- identifiability and nuisance degeneracy；
+- joint inference；
+- functional-law compression；
+- basis separation；
+- model-derived systemhood；
+- intervention Jacobian analysis。
+
+These notebooks are conceptual/numerical research aids, not empirical evidence.
+
+---
+
+# 🕰️ Version 1 — Original Fixed (3+3) Spacetime Model
+
+Version 1 is the original project direction and remains preserved on `main`.
+
+It explores a speculative spacetime with coordinates:
+
+[
+(x,y,z,t_1,t_2,t_3)
+]
+
+and metric of the form:
+
+[
+ds^2
+=
+dx^2+dy^2+dz^2
+-c^2dt_1^2
+-alpha_2^2c^2dt_2^2
+-alpha_3^2c^2dt_3^2.
+]
+
+The original concept explored:
+
+- several timelike directions；
+- Wick rotation of an internal time axis；
+- reinterpretation of rest mass as internal oscillation energy；
+- gauge constraints inspired by Two-Time Physics；
+- entropy-gradient ideas for the arrow of time；
+- reinterpretations of static gravity and gravitational waves。
+
+The original manuscript remains available in:
+
+- `paper.tex`
+- `spacetime_animation.ipynb`
+
+Version 1 is retained for historical continuity and comparison, not because its core problems have been solved.
+
+---
+
+# 🚧 Version 1 Known Issues
+
+Important unresolved problems include:
+
+1. Wick rotation changes the effective signature and undermines the literal fixed ((3+3)) interpretation.
+2. (E_2=m_0c^2) is an interpretation/definition rather than a dynamical derivation.
+3. The (alpha_2) assumptions are internally inconsistent.
+4. The written constraint operator may eliminate the entire Hilbert space.
+5. The ultrahyperbolic Cauchy problem is unresolved.
+6. Measurement cannot be reduced to photon impact.
+7. The system/apparatus/environment structure overlaps standard decoherence theory.
+8. Some proposed experimental formulas lack operational definitions or dimensional consistency.
+9. The gravity section largely restates standard Newtonian/GR results rather than deriving new predictions from the model.
+
+These limitations are part of the reason Version 2 moved away from fixed universal extra time axes.
+
+---
+
+# 📂 Repository Structure
 
 ```text
-├── README.md                  # 專案說明（雙語，含免責聲明）Project overview with disclaimer
-├── paper.tex                  # 推測性構想文稿的 LaTeX 原始碼 LaTeX source of the speculative write-up
-└── spacetime_animation.ipynb  # 視覺化筆記本 Visualization notebook
+.
+├── README.md
+├── paper.tex
+├── spacetime_animation.ipynb
+├── docs/
+│   ├── emergent-local-time-v2.md
+│   ├── mathematical-foundation-v2.md
+│   ├── systemhood-functional-v0.2.md
+│   ├── computable-systemhood-v0.3.md
+│   ├── numerical-systemhood-v0.4.md
+│   ├── partition-robustness-v0.5.md
+│   ├── dynamic-system-identity-v0.6.md
+│   ├── operational-clocks-v0.7.md
+│   ├── temporal-residual-v0.8.md
+│   ├── mock-experiment-v0.9.md
+│   ├── joint-inference-v0.10.md
+│   ├── functional-law-compression-v0.11.md
+│   ├── basis-separation-v0.12.md
+│   ├── model-derived-systemhood-v0.13.md
+│   ├── intervention-jacobian-v0.14.md
+│   └── version2-research-checkpoint-v0.14.md
+└── notebooks/
+    └── Version 2 numerical / toy-model studies
 ```
 
 ---
 
-## 🙏 給讀者的話 / Note to Readers
+# 🧭 Branch / Research Workflow
 
-這份專案記錄了一位非物理專業愛好者，從「時間會不會也有 3 個維度？」這個問題出發的思想探索過程。文中構想與真實物理文獻（Bars 的 Two-Time Physics、Tegmark 的時空維度分析、Zurek 的退相干理論、類比重力等）有有趣的呼應，但**兩者之間的距離仍然巨大**。若您是物理專業人士，歡迎開 Issue 指出錯誤；若您是一般讀者，請把它當作一場思想實驗來欣賞，並以教科書與同行評審文獻作為學習物理的依據。
+- `main`: preserves Version 1.
+- `concept/emergent-local-time-v2`: active Version 2 research branch.
+- Draft PR #1 remains open and unmerged while Version 2 is being stress-tested.
 
-*This repo documents a physics enthusiast's thought experiment starting from the question "what if time had three dimensions?" — please enjoy it as such, and rely on textbooks and peer-reviewed literature for actual physics.*
+This separation is intentional.
 
+---
 
-### Version 2 research checkpoint — paused after v0.14
+# 🙏 Note to Readers
 
-Version 2 has now reached a deliberate consolidation checkpoint.
+這個 repository 記錄的是一個從「時間是否可能具有更複雜結構？」出發，逐步把直覺轉換成可檢查假說的研究過程。
 
-**Checkpoint summary:** [`docs/version2-research-checkpoint-v0.14.md`](docs/version2-research-checkpoint-v0.14.md)
-
-The research path currently runs from dynamical individuation and systemhood diagnostics through operational clocks, falsifiable temporal residuals, statistical identifiability, functional-law compression, model-derived diagnostics, and intervention-based validation.
-
-The most important current conclusion is negative/disciplinary rather than evidential: **no new physical time degree of freedom has been established.** Temporal phenomenology is intentionally paused while the proposed systemhood basis is tested for operational independence across multiple physical model families.
-
-Current gate before temporal modeling resumes:
+其中最重要的原則是：
 
 [
-\text{multi-platform physical interventions}
-\rightarrow
-\text{validated systemhood basis}
-\rightarrow
-\text{only then reconsider temporal dynamics}.
+oxed{
+	ext{interesting idea}
+
+eq
+	ext{physical evidence}
+}
 ]
 
-The Draft PR remains unmerged so Version 1 is preserved while Version 2 is stress-tested.
+Version 2 的目標不是保護原本的直覺，而是找出它在哪些地方會失敗，以及是否仍有任何不可被標準物理吸收的剩餘結構。
+
+If you are a physicist, comments on mathematical consistency, operational definitions, identifiability, and comparison with established literature are especially welcome.
+
+If you are a general reader, please treat this repository as a documented thought experiment and learning process, not as established physics.
