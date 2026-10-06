@@ -715,3 +715,17 @@ Recommended simulations:
 7. test whether proposed system boundaries remain robust under partition changes in a 3- or 4-qubit toy network.
 
 Only after this numerical stage should the project attempt a temporal correction (\Phi_i).
+
+
+---
+
+## 18. v0.4 numerical continuation
+
+The numerical stage is now available in:
+
+- [`notebooks/systemhood_simulation_v0.4.ipynb`](../notebooks/systemhood_simulation_v0.4.ipynb)
+- [`docs/numerical-systemhood-v0.4.md`](numerical-systemhood-v0.4.md)
+
+The XX-interaction benchmark reproduces (C_{\max}=1) at (Jt=\pi/4), and the Bell dephasing model shows explicitly that correlation and state retention evolve differently.
+
+v0.4 also sharpens the persistence definition: fidelity to an initial state is not persistence. The appropriate candidate compares the actual future state with the future state predicted by an effective model.
