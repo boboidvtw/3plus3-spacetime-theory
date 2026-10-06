@@ -68,6 +68,8 @@ This repository explores a **speculative (3+3) spacetime concept** with three sp
 
 完整概念筆記見 [`docs/emergent-local-time-v2.md`](docs/emergent-local-time-v2.md)。
 
+數學化第一步已開始：[`docs/mathematical-foundation-v2.md`](docs/mathematical-foundation-v2.md) 建立了 $A+B\rightleftarrows C$ Toy Model v0.1、GR/QM 基準、relational time、systemhood placeholder 與明確 failure criteria。
+
 特別注意：血液更新、頭髮成長速度不同、粒子壽命不同等現象，標準物理本來就能用共同時間參數描述，因此**不能直接作為多時間存在的證據**。Version 2 必須進一步證明局部 (\tau_i) 不是單純的重新參數化，並導出相對於 QM/QFT + GR 可區分的結果。
 
 ---
