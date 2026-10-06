@@ -454,3 +454,17 @@ The v0.14 gate is:
 ]
 
 Only after that should temporal phenomenology resume.
+
+
+---
+
+## 17. v0.14 continuation
+
+Controlled-intervention analysis is now implemented in:
+
+- [`notebooks/intervention_jacobian_v0.14.ipynb`](../notebooks/intervention_jacobian_v0.14.ipynb)
+- [`docs/intervention-jacobian-v0.14.md`](intervention-jacobian-v0.14.md)
+
+The key result is a parameterization warning. An explicitly independent (E_{sep}) knob can make the local (4\times4) intervention Jacobian full rank, but tying (E_{sep}=|J|) as in the original dimer proxy leaves only three physical controls and limits the intervention rank to at most three.
+
+Accordingly, a systemhood dimension now counts as independently validated only through physically justified controls/observables, not through parameters introduced to manufacture rank. v0.15 should combine intervention directions from several distinct physical model families rather than demand that one toy dimer span the entire diagnostic space.
