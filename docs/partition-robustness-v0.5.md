@@ -291,3 +291,17 @@ The key quantity becomes a time-dependent profile:
 If preferred partitions appear, disappear, merge, or split as the physical state evolves, Version 2 will finally have a mathematical prototype for a **dynamic system-identity network**.
 
 Only after that should the project attempt to associate such identity transitions with any temporal-emergence law.
+
+
+---
+
+## 14. v0.6 continuation
+
+Dynamic formation, merger, and separation are now modeled in:
+
+- [`notebooks/dynamic_system_identity_v0.6.ipynb`](../notebooks/dynamic_system_identity_v0.6.ipynb)
+- [`docs/dynamic-system-identity-v0.6.md`](dynamic-system-identity-v0.6.md)
+
+The key result is deliberately conservative: a preferred system decomposition can change dynamically under standard quantum mechanics. Therefore **dynamical identity emergence is not by itself evidence for temporal emergence**.
+
+The project now distinguishes dynamical individuation, operational local clocks, and genuinely nonredundant temporal dynamics.
