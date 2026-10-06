@@ -214,7 +214,23 @@ Version 1 postulated three universal temporal coordinates (t_1,t_2,t_3). Version
 
 Version 1 remains preserved as the historical origin of the idea. Version 2 should not be interpreted as having solved the mathematical problems of Version 1; it is a different research direction.
 
-## 11. Minimal toy model to build next
+## 11. Minimal toy model
+
+The first mathematical working model has now been started in:
+
+[`docs/mathematical-foundation-v2.md`](mathematical-foundation-v2.md)
+
+It studies
+
+[
+A+B\rightleftarrows C
+]
+
+and explicitly separates definitions, conjectures, standard-physics baselines, relational observables, and failure criteria.
+
+### Current questions
+
+
 
 The first mathematical target should be deliberately small:
 
