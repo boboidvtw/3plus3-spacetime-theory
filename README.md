@@ -45,6 +45,33 @@ This repository explores a **speculative (3+3) spacetime concept** with three sp
 
 ---
 
+## 🧭 Version 2：湧現式局部時間 / Emergent Local Time
+
+> **2026-10 構想演進：** 本專案目前正在探索一條與原始固定 `(3+3)` 時空不同的新方向。原始模型保留作為 Version 1，不視為已被新構想證明或取代。
+
+新的工作假說不再預設宇宙只有三條、或固定 (N) 條所有物體共用的額外時間軸。相反地，它探索：
+
+- 每個客觀可區分的 dynamical system / state 是否可具有自己的局部時間歷程 (\tau_S)；
+- 人體、血液、細胞、分子、原子等不同層級的 temporal histories 是否能同時存在；
+- 即使複合系統持續交換／更新其物質組成，系統本身仍可能保持連續的 temporal identity；
+- 結合形成新系統與分離形成新個體，都可能對應新的 temporal identity；
+- 真正可觀測的量或許不是孤立的 (\tau_i)，而是系統之間的關係，例如 (d\tau_i/d\tau_j)；
+- 必須建立 observer-independent 的 **systemhood / dynamical individuation** 判準，否則「時間」會淪為人為劃分物體的結果。
+
+這個方向暫稱：
+
+**3D Space + Dynamic Hierarchical Temporal Network**
+
+或：
+
+**Emergent Local Time / Dynamic Temporal Identity Framework**
+
+完整概念筆記見 [`docs/emergent-local-time-v2.md`](docs/emergent-local-time-v2.md)。
+
+特別注意：血液更新、頭髮成長速度不同、粒子壽命不同等現象，標準物理本來就能用共同時間參數描述，因此**不能直接作為多時間存在的證據**。Version 2 必須進一步證明局部 (\tau_i) 不是單純的重新參數化，並導出相對於 QM/QFT + GR 可區分的結果。
+
+---
+
 ## 💡 核心構想（推測）/ Core Conjectures (Speculative)
 
 > 下表為本專案的**猜想**，非已證明的結果。The table below lists **conjectures**, not established results.
