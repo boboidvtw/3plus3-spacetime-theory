@@ -476,7 +476,23 @@ The present goal is narrower: define a framework in which these questions can be
 
 ---
 
-## 14. Immediate research tasks for v0.2
+## 14. v0.2 progress
+
+The first Systemhood construction is now documented in:
+
+[`docs/systemhood-functional-v0.2.md`](systemhood-functional-v0.2.md)
+
+The main result is that a single scalar criterion is premature. The current working representation is the multi-component profile
+
+[
+\mathbf I(S|E)=(B,C,A,P),
+]
+
+representing dynamical cohesion, internal correlation, autonomy, and predictive persistence.
+
+Initial stress tests were performed conceptually for two free particles, hydrogen, entangled qubits, and an open system with constituent turnover. None currently demonstrates an additional physical time; they constrain what a future systemhood definition must accomplish.
+
+## 15. Immediate research tasks for v0.3
 
 1. Choose a precise mathematical candidate for (\mathcal I(S)).
 2. Compute it for noninteracting particles, hydrogen, and entangled qubits.
