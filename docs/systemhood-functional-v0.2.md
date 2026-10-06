@@ -523,3 +523,28 @@ Recommended order:
 6. only then attempt (w_\tau=G(\mathbf I)).
 
 The project should reject any candidate systemhood definition that classifies arbitrary observer-selected collections as strongly individuated without an invariant dynamical reason.
+
+
+---
+
+## 17. v0.3 continuation
+
+The next stage has been completed in:
+
+[`docs/computable-systemhood-v0.3.md`](computable-systemhood-v0.3.md)
+
+v0.3 replaces several schematic quantities with finite-dimensional computable diagnostics, including normalized two-qubit mutual information, an interaction/coupling autonomy proxy, fidelity-based persistence, and a bound-state cohesion proxy.
+
+A key exact benchmark is the Bell state:
+
+[
+C=1
+]
+
+while a noninteracting post-preparation pair can simultaneously have the toy autonomy value
+
+[
+A_J=0.
+]
+
+This demonstrates explicitly that correlation and dynamical autonomy cannot be identified.
