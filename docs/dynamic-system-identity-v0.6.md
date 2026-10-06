@@ -392,3 +392,23 @@ The v0.7 failure condition should be strict:
 ]
 
 This is the next decisive test.
+
+
+---
+
+## 13. v0.7 continuation
+
+Operational clocks and the standard-QM null test are now implemented in:
+
+- [`notebooks/operational_clocks_v0.7.ipynb`](../notebooks/operational_clocks_v0.7.ipynb)
+- [`docs/operational-clocks-v0.7.md`](operational-clocks-v0.7.md)
+
+The project now has an explicit measurable phase clock and a relational clock ratio. The central residual is
+
+[
+\Delta R_{ij}=R_{ij}^{obs}-R_{ij}^{std},
+]
+
+where the standard baseline must include the full interaction model rather than an uncoupled clock frequency ratio.
+
+In the v0.7 null model, (\Delta R_{ij}=0) up to numerical precision by construction. This is an intentional validation: dynamical identity events alone do not generate a false temporal anomaly.
