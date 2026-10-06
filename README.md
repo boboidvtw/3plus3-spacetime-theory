@@ -139,3 +139,26 @@ This repository explores a **speculative (3+3) spacetime concept** with three sp
 這份專案記錄了一位非物理專業愛好者，從「時間會不會也有 3 個維度？」這個問題出發的思想探索過程。文中構想與真實物理文獻（Bars 的 Two-Time Physics、Tegmark 的時空維度分析、Zurek 的退相干理論、類比重力等）有有趣的呼應，但**兩者之間的距離仍然巨大**。若您是物理專業人士，歡迎開 Issue 指出錯誤；若您是一般讀者，請把它當作一場思想實驗來欣賞，並以教科書與同行評審文獻作為學習物理的依據。
 
 *This repo documents a physics enthusiast's thought experiment starting from the question "what if time had three dimensions?" — please enjoy it as such, and rely on textbooks and peer-reviewed literature for actual physics.*
+
+
+### Version 2 research checkpoint — paused after v0.14
+
+Version 2 has now reached a deliberate consolidation checkpoint.
+
+**Checkpoint summary:** [`docs/version2-research-checkpoint-v0.14.md`](docs/version2-research-checkpoint-v0.14.md)
+
+The research path currently runs from dynamical individuation and systemhood diagnostics through operational clocks, falsifiable temporal residuals, statistical identifiability, functional-law compression, model-derived diagnostics, and intervention-based validation.
+
+The most important current conclusion is negative/disciplinary rather than evidential: **no new physical time degree of freedom has been established.** Temporal phenomenology is intentionally paused while the proposed systemhood basis is tested for operational independence across multiple physical model families.
+
+Current gate before temporal modeling resumes:
+
+[
+\text{multi-platform physical interventions}
+\rightarrow
+\text{validated systemhood basis}
+\rightarrow
+\text{only then reconsider temporal dynamics}.
+]
+
+The Draft PR remains unmerged so Version 1 is preserved while Version 2 is stress-tested.
