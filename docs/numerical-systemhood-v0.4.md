@@ -179,3 +179,17 @@ The central question becomes:
 ]
 
 This directly attacks the arbitrary-subset problem: the theory must identify dynamical boundaries from physics, not from labels chosen by the observer.
+
+
+---
+
+## 9. v0.5 continuation
+
+Partition robustness is now tested in:
+
+- [`notebooks/partition_robustness_v0.5.ipynb`](../notebooks/partition_robustness_v0.5.ipynb)
+- [`docs/partition-robustness-v0.5.md`](partition-robustness-v0.5.md)
+
+A four-node graph with two strong internal pairs and weak cross-couplings recovers the intended dynamical cut from coupling structure alone. For the canonical cluster ({0,1}), the toy partition-autonomy score is approximately (0.806), compared with approximately (0.024) and (0.009) for the cross-pairs ({0,2}) and ({0,3}).
+
+This is a controlled proof-of-concept for a dynamical boundary, not evidence for temporal emergence.
