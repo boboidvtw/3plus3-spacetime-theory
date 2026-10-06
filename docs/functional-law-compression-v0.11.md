@@ -367,3 +367,17 @@ It is:
 ]
 
 If not, the (B,C,A,P) decomposition itself must be revised before proceeding toward real experiments.
+
+
+---
+
+## 16. v0.12 continuation
+
+Systemhood-basis separation is now tested in:
+
+- [`notebooks/basis_separation_v0.12.ipynb`](../notebooks/basis_separation_v0.12.ipynb)
+- [`docs/basis-separation-v0.12.md`](basis-separation-v0.12.md)
+
+A deliberately heterogeneous counterexample suite shows that (B,C,A,P) can form a full-rank feature geometry, so the four coordinates are not mathematically forced to be redundant. However, the present normalized scores are illustrative rather than derived from explicit physical dynamics.
+
+Temporal fitting is therefore intentionally paused. v0.13 should replace hand-assigned rows with model-derived diagnostics and repeat the rank/conditioning analysis on (Z_{phys}).
