@@ -449,3 +449,23 @@ The key questions are:
 5. Can one value of (\epsilon) explain multiple merger/separation profiles?
 
 This is the correct next step before discussing real experiments.
+
+
+---
+
+## 18. v0.9 continuation
+
+Synthetic identifiability analysis is now implemented in:
+
+- [`notebooks/mock_experiment_v0.9.ipynb`](../notebooks/mock_experiment_v0.9.ipynb)
+- [`docs/mock-experiment-v0.9.md`](mock-experiment-v0.9.md)
+
+The central result is structural: if the temporal template lies in the span of ordinary nuisance templates,
+
+[
+F\in\operatorname{span}\{G_k\},
+]
+
+then (\epsilon) is not identifiable from that experiment, regardless of how small the random measurement noise becomes.
+
+The next stage should therefore test one shared (\epsilon) across multiple synthetic experiments with experiment-specific nuisance parameters.
