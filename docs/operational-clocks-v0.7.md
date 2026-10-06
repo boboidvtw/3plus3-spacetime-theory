@@ -400,3 +400,33 @@ Then perform parameter scans to determine what a hypothetical
 would actually look like.
 
 This will not prove the hypothesis, but it will convert “emergent time” into a quantitatively falsifiable proposal.
+
+
+---
+
+## 15. v0.8 continuation
+
+A deliberately phenomenological temporal correction and its falsifiability tests are now implemented in:
+
+- [`notebooks/temporal_residual_v0.8.ipynb`](../notebooks/temporal_residual_v0.8.ipynb)
+- [`docs/temporal-residual-v0.8.md`](temporal-residual-v0.8.md)
+
+The ansatz
+
+[
+\frac{d\tau_i}{dt}
+=
+N_i^{std}(1+\epsilon F_i)
+]
+
+is explicitly labeled hypothetical. It preserves the standard limit, relational transitivity, inverse-label consistency, and an identical-profile null result.
+
+For small (\epsilon),
+
+[
+\Delta R_{ij}
+\approx
+\epsilon R_{ij}^{std}(F_i-F_j).
+]
+
+A universal common-mode (F_i=F_{common}) cancels from relational ratios, so the present framework tests differential temporal response rather than an unobservable universal time rescaling.
