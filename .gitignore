@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+
+# LaTeX build artifacts（paper.pdf 是刻意保留的成品）
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+.venv/
